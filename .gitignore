@@ -1,17 +1,23 @@
 #metadata
 .metadata
+.DS_Store
+Debug/
 
 # Object files
 *.o
 *.ko
 *.obj
 *.elf
+*.launch
+*.s
+
 
 # Libraries
 *.lib
 *.a
 *.la
 *.lo
+*.ld
 
 # Shared objects (inc. Windows DLLs)
 *.dll
