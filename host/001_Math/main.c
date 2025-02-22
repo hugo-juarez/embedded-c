@@ -2,7 +2,7 @@
  * main.c
  *
  *  Created on: Feb 20, 2025
- *      Author: hseba
+ *      Author: Hugo Juarez
  */
 
 #include <stdio.h>
