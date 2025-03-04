@@ -31,14 +31,27 @@ int main(void)
 
 	//2. Configure the mode of the GPIO D port
 	//Lets first clear the two bits we are going to use for pin 12, which is bit 24 and 25
-	*pPortDModeReg &= ~(11 << 24);
+	*pPortDModeReg &= ~(3 << 24);
 
 	//Now that we know the values are 0 we can set the bit we need to 1 which is 24
 	*pPortDModeReg |= (1<<24);
 
-	//3. Finally set output value to 1
-	*pPortDOutRef |= (1<<12);
 
     /* Loop forever */
-	for(;;);
+	for(;;){
+		//3. Finally set output value to 1
+		*pPortDOutRef |= (1<<12);
+
+		//Adding delay
+		for( uint32_t i=0 ; i<10000000;i++);
+
+		//Turn LED off
+		*pPortDOutRef &= ~(1<<12);
+
+		//Adding delay
+		for( uint32_t i=0 ; i<10000000;i++);
+
+
+
+	}
 }
