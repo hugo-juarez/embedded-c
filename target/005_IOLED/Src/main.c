@@ -24,11 +24,11 @@
 
 int main(void)
 {
-	uint32_t volatile *pGPIOA = (uint32_t *) 0x40020000;
-	uint32_t volatile *pGPIOD = (uint32_t *) 0x40020C00;
-	uint32_t volatile *pRCC = (uint32_t *) (0x40023800 + 0x30);
-	uint32_t volatile *input = (uint32_t *) 0x40020010;
-	uint32_t volatile *output = (uint32_t *) 0x40020C14;
+	uint32_t volatile *const pGPIOA = (uint32_t *) 0x40020000;
+	uint32_t volatile *const pGPIOD = (uint32_t *) 0x40020C00;
+	uint32_t volatile *const pRCC = (uint32_t *) (0x40023800 + 0x30);
+	uint32_t const volatile *const input = (uint32_t *) 0x40020010;
+	uint32_t volatile *const output = (uint32_t *) 0x40020C14;
 
 
 	//Enabling clock on peripherals
